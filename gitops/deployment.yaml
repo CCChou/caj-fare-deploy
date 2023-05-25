@@ -23,3 +23,33 @@ spec:
           ports:
             - containerPort: 8080
               protocol: TCP
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: caj-fare
+    version: v1
+  name: caj-fare
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: caj-fare
+      version: v1
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: caj-fare
+        version: v1
+    spec:
+      containers:
+      - image: quay.io/rhtw/caj-fare:2023-05-25-07-42-06
+        name: caj-fare
+        ports:
+        - containerPort: 8080
+          protocol: TCP
+        resources: {}
+status: {}
