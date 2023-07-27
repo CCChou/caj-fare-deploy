@@ -19,7 +19,7 @@ spec:
     spec:
       containers:
         - name: caj-fare
-          image: 'quay.io/rhtw/caj-fare:2023-07-27-03-35-26'
+          image: 'quay.io/rhtw/caj-fare:2023-07-27-06-42-01'
           ports:
             - containerPort: 8080
               protocol: TCP
